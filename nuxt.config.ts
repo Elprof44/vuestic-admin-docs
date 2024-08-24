@@ -69,9 +69,8 @@ export default defineNuxtConfig({
   modules: [
     '@vuestic/nuxt',
     '@nuxtjs/google-fonts',
-    '@zadigetvoltaire/nuxt-gtm'
   ],
-
+  // '@sidebase/nuxt-auth',
   googleFonts: {
     families: {
       Inter: [400, 600, 700],
@@ -93,7 +92,7 @@ export default defineNuxtConfig({
       },
     },
 
-    css: ['typography'],
+    css: ['typography', 'grid', "reset", "smart-helpers"],
   },
 
   postcss: {
@@ -111,8 +110,5 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
   },
 
-  gtm: {
-    id: process.env.NUXT_GTM_KEY,
-    enabled: process.env.NUXT_GTM_ENABLED,
-  }
 })
+
